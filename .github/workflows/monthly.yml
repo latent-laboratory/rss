@@ -1,0 +1,32 @@
+name: Feed (monthly)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 1 * *"
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    env:
+      frequency: "monthly"
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.*'
+
+      - name: python
+        run:
+          python data.py src/data/${{ env.frequency }}.json
+
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: New ${{ env.frequency }} post
+          commit_options: '--no-verify --signoff'
+          file_pattern: 'src/data/*.json'
