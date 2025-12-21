@@ -15,7 +15,7 @@ export default function handler(req, res) {
     const feed = new RSS({
       title: `${project} (${frequency})`,
       site_url: API,
-      feed_url: `${API}/rss/${frequency}`,
+      feed_url: `${API}/${project}/${frequency}`,
       generator: 'generator'
     })
     data[frequency].posts.forEach((p) => {
