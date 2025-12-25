@@ -8,6 +8,8 @@
 
 The following automated feeds are updated daily, weekly, and monthly with new hashes. Replace `{project}` with any of these [generators](https://generator.pxlq.art).
 
+E.g. https://rss.pxlq.art/mathfont/daily
+
 `[0 0 * * *]`  
 https://rss.pxlq.art/{project}/daily
 
