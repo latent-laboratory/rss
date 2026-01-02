@@ -1,10 +1,6 @@
 {
   "posts": [
     {
-      "date": "2025-12-21",
-      "hash": "0x13a1346c2952095fdad1f4a695e9ed24c51e6cd3585faba3e10799531859066c"
-    },
-    {
       "date": "2026-01-01",
       "hash": "0x9efe891672a3d1c239f818befbf100e5e837fb1667550079dc4c75e466ed575e"
     }
